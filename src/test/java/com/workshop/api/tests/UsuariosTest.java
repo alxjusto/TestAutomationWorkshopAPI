@@ -1,9 +1,18 @@
 package com.workshop.api.tests;
 
+import com.workshop.api.dto.Usuario;
+import com.workshop.api.mapper.UsuarioMapper;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.filter.Filter;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -14,54 +23,50 @@ public class UsuariosTest {
 
     @BeforeAll
     public static void setUp() {
-        requestSpecification = given()
-                .baseUri("https://reqres.in")
-                .basePath("/api")
-                .contentType(ContentType.JSON);
+        List<Filter> filters = new ArrayList<>();
+        filters.add(new RequestLoggingFilter());
+        filters.add(new ResponseLoggingFilter());
+
+        requestSpecification = new RequestSpecBuilder()
+                .setBaseUri("https://reqres.in")
+                .setBasePath("/api")
+                .addFilters(filters)
+                .setContentType(ContentType.JSON)
+                .build();
     }
 
     @Test
     public void obtenerListadoDeUsuarioTest() {
-
-        String response = given(requestSpecification)
+        given(requestSpecification)
                 .get("users?page=1")
-                .then()
-                .extract()
-                .asString();
-
-        System.out.println(response);
+                .then();
     }
+
 
     @Test
     public void crearUsuarioTest() {
 
-        String response = given(requestSpecification)
-                .body("{\n" +
-                        "    \"name\": \"pepe\",\n" +
-                        "    \"job\": \"tester\"\n" +
-                        "}")
-                .post("users")
-                .then()
-                .extract()
-                .asString();
+        UsuarioMapper usuarioMapper = new UsuarioMapper();
+        Usuario usuario = usuarioMapper.setUsuarioRequest(new Usuario("pepe","tester"));
 
-        System.out.println(response);
+        given(requestSpecification)
+                .when()
+                .body(usuario)
+                .post("users")
+                .then();
     }
+
 
     @Test
     public void actualizarUsuarioTest() {
 
-        String response = given(requestSpecification)
-                .body("{\n" +
-                        "    \"name\": \"ana\",\n" +
-                        "    \"job\": \"dev\"\n" +
-                        "}")
-                .put("users/1")
-                .then()
-                .extract()
-                .asString();
+        UsuarioMapper usuarioMapper = new UsuarioMapper();
+        Usuario usuario = usuarioMapper.setUsuarioRequest(new Usuario("ana","dev"));
 
-        System.out.println(response);
+        given(requestSpecification)
+                .body(usuario)
+                .put("users/1")
+                .then();
     }
 
 }

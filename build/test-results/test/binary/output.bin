@@ -1,1 +1,39 @@
-4{"id":"868","createdAt":"2021-08-15T22:56:22.666Z"}
+Request method:	POST
+)Request URI:	https://reqres.in/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+"				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "pepe",
+    "job": "tester"
+}
+HTTP/1.1 201 Created
+$Date: Sun, 22 Aug 2021 23:10:13 GMT
+.Content-Type: application/json; charset=utf-8
+Content-Length: 80
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+)etag: W/"50-uP5V1hSVhsM9hEXUGT7iiUVvBhw"
+via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+cExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+ýReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mmhl9xz94la8akcmq0IuXZmkViDKo4%2Bptg58%2BKgFh4%2FQ%2BOjwcVC7pS4T0FG4J3xWQTJ85SdP8fboHF0MxolE9zfrDTJOf%2FtlMVGF5OIoy1NoleR8L0U3KaJTjzk%3D"}],"group":"cf-nel","max_age":604800}
+BNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 682fc5f33bc156b9-LIM
+ealt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
+
+{
+    "name": "pepe",
+    "job": "tester",
+    "id": "349",
+,    "createdAt": "2021-08-22T23:10:13.439Z"
+}
