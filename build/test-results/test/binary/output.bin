@@ -11,29 +11,162 @@
 Multiparts:		<none>
 Body:
 {
-    "name": "pepe",
-    "job": "tester"
+    "name": "ana",
+    "job": "dev"
 }
 HTTP/1.1 201 Created
-$Date: Sun, 22 Aug 2021 23:10:13 GMT
+$Date: Sun, 29 Aug 2021 05:09:22 GMT
 .Content-Type: application/json; charset=utf-8
-Content-Length: 80
+Content-Length: 76
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-)etag: W/"50-uP5V1hSVhsM9hEXUGT7iiUVvBhw"
+)etag: W/"4c-gs28RyzlDReL7W/vVGqzwLVlZ+Q"
 via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 cExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-ýReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mmhl9xz94la8akcmq0IuXZmkViDKo4%2Bptg58%2BKgFh4%2FQ%2BOjwcVC7pS4T0FG4J3xWQTJ85SdP8fboHF0MxolE9zfrDTJOf%2FtlMVGF5OIoy1NoleR8L0U3KaJTjzk%3D"}],"group":"cf-nel","max_age":604800}
+ûReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pvhXX1Lwuj7EZ2akh0HqMgQWdTiiCkvg96TkkmXG2HomxHZo2Zw6twLRvgWvJYGESAPcKgssTAlzGx%2FY11mMQ%2BU4IQWlIqNcNWssaIrY%2FFVdKAdFZ4X%2Fxh98eD4%3D"}],"group":"cf-nel","max_age":604800}
 BNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 682fc5f33bc156b9-LIM
+CF-RAY: 6863444d4929b02e-LIM
 ealt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
 
 {
-    "name": "pepe",
-    "job": "tester",
-    "id": "349",
-,    "createdAt": "2021-08-22T23:10:13.439Z"
+    "name": "ana",
+    "job": "dev",
+    "id": "744",
+,    "createdAt": "2021-08-29T05:09:22.631Z"
 }
+Request method:	GET
+0Request URI:	https://reqres.in/api/users?page=1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+"				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+$Date: Sun, 29 Aug 2021 05:09:23 GMT
+.Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+*etag: W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"
+via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: MISS
+cExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+ûReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MGpYAg7carsDtrR8%2FGc1OMhL5RzD%2B%2FAE9gs6LEAa3r4JdDYq%2Fg7GEIIAMOD7MNYTgKjzU38UGNwBozedBeHwQFC7a4OSpYXojR7ei9IoOg6c26b6RpM4p9VTkX0%3D"}],"group":"cf-nel","max_age":604800}
+BNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 686344543f8156b9-LIM
+Content-Encoding: gzip
+ealt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
+
+{
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+
+        {
+            "id": 1,
+/            "email": "george.bluth@reqres.in",
+$            "first_name": "George",
+"            "last_name": "Bluth",
+@            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+
+        {
+            "id": 2,
+/            "email": "janet.weaver@reqres.in",
+#            "first_name": "Janet",
+#            "last_name": "Weaver",
+@            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        },
+
+        {
+            "id": 3,
+,            "email": "emma.wong@reqres.in",
+"            "first_name": "Emma",
+!            "last_name": "Wong",
+@            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+
+        {
+            "id": 4,
++            "email": "eve.holt@reqres.in",
+!            "first_name": "Eve",
+!            "last_name": "Holt",
+@            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        },
+
+        {
+            "id": 5,
+1            "email": "charles.morris@reqres.in",
+%            "first_name": "Charles",
+#            "last_name": "Morris",
+@            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+        },
+
+        {
+            "id": 6,
+/            "email": "tracey.ramos@reqres.in",
+$            "first_name": "Tracey",
+"            "last_name": "Ramos",
+@            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+
+        }
+    ],
+    "support": {
+5        "url": "https://reqres.in/#support-heading",
+[        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+Request method:	PUT
++Request URI:	https://reqres.in/api/users/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+"				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "ana",
+    "job": "dev"
+}
+HTTP/1.1 200 OK
+$Date: Sun, 29 Aug 2021 05:09:24 GMT
+.Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+)etag: W/"41-JNtil1W7ia5YCc54mAZ/54LMYXs"
+via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+cExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+÷Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=maNYK3adpF2r55JCHd9T72AmcxMt3PBsWUlHO5PYjgTBK8EjJlI27Zc7TAVb1fZv4yn%2BHPfUU%2BUOUoOolWLRgT5TbGsSrn14JfFTCjzNEKWDhFkU1ZLK0hwiMS8%3D"}],"group":"cf-nel","max_age":604800}
+BNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 68634457cce056a6-LIM
+Content-Encoding: gzip
+ealt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
+
+{
+    "name": "ana",
+    "job": "dev",
+,    "updatedAt": "2021-08-29T05:09:24.082Z"
+}

@@ -1,70 +1,39 @@
 package com.workshop.api.tests;
 
-import com.workshop.api.dto.Usuario;
+import com.workshop.api.dto.User;
+import com.workshop.api.helper.BaseTestHelper;
+import com.workshop.api.helper.CreateUserHelper;
 import com.workshop.api.mapper.UsuarioMapper;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.Filter;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
-import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
-import org.junit.jupiter.api.BeforeAll;
+import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class UsuariosTest {
-
-    private static RequestSpecification requestSpecification;
-
-
-    @BeforeAll
-    public static void setUp() {
-        List<Filter> filters = new ArrayList<>();
-        filters.add(new RequestLoggingFilter());
-        filters.add(new ResponseLoggingFilter());
-
-        requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://reqres.in")
-                .setBasePath("/api")
-                .addFilters(filters)
-                .setContentType(ContentType.JSON)
-                .build();
-    }
+public class UsuariosTest extends BaseTestHelper {
 
     @Test
     public void obtenerListadoDeUsuarioTest() {
-        given(requestSpecification)
+        given()
                 .get("users?page=1")
                 .then();
     }
 
-
     @Test
-    public void crearUsuarioTest() {
-
-        UsuarioMapper usuarioMapper = new UsuarioMapper();
-        Usuario usuario = usuarioMapper.setUsuarioRequest(new Usuario("pepe","tester"));
-
-        given(requestSpecification)
-                .when()
-                .body(usuario)
-                .post("users")
-                .then();
+    public void crearUsuarioTest() throws Exception {
+        CreateUserHelper createUserHelper = new CreateUserHelper();
+        Response response = createUserHelper.createUser();
+        Assertions.assertEquals(201, response.getStatusCode());
     }
-
 
     @Test
     public void actualizarUsuarioTest() {
 
         UsuarioMapper usuarioMapper = new UsuarioMapper();
-        Usuario usuario = usuarioMapper.setUsuarioRequest(new Usuario("ana","dev"));
+        User user = usuarioMapper.setUsuarioRequest(new User("ana", "dev"));
 
-        given(requestSpecification)
-                .body(usuario)
+        given()
+                .body(user)
                 .put("users/1")
                 .then();
     }
