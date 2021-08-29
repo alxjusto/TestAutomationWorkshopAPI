@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.751s</div>
+<div class="counter">4.074s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,18 @@
 </tr>
 </thead>
 <tr>
+<td class="success">actualizarUsuarioTest()</td>
+<td class="success">0.550s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">crearUsuarioTest()</td>
-<td class="success">2.751s</td>
+<td class="success">2.803s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">obtenerListadoDeUsuarioTest()</td>
+<td class="success">0.721s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -100,31 +110,157 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:
 {
-    &quot;name&quot;: &quot;pepe&quot;,
-    &quot;job&quot;: &quot;tester&quot;
+    &quot;name&quot;: &quot;ana&quot;,
+    &quot;job&quot;: &quot;dev&quot;
 }
 HTTP/1.1 201 Created
-Date: Sun, 22 Aug 2021 23:10:13 GMT
+Date: Sun, 29 Aug 2021 05:09:22 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 80
+Content-Length: 76
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-etag: W/&quot;50-uP5V1hSVhsM9hEXUGT7iiUVvBhw&quot;
+etag: W/&quot;4c-gs28RyzlDReL7W/vVGqzwLVlZ+Q&quot;
 via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=mmhl9xz94la8akcmq0IuXZmkViDKo4%2Bptg58%2BKgFh4%2FQ%2BOjwcVC7pS4T0FG4J3xWQTJ85SdP8fboHF0MxolE9zfrDTJOf%2FtlMVGF5OIoy1NoleR8L0U3KaJTjzk%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=pvhXX1Lwuj7EZ2akh0HqMgQWdTiiCkvg96TkkmXG2HomxHZo2Zw6twLRvgWvJYGESAPcKgssTAlzGx%2FY11mMQ%2BU4IQWlIqNcNWssaIrY%2FFVdKAdFZ4X%2Fxh98eD4%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Server: cloudflare
-CF-RAY: 682fc5f33bc156b9-LIM
+CF-RAY: 6863444d4929b02e-LIM
 alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400
 
 {
-    &quot;name&quot;: &quot;pepe&quot;,
-    &quot;job&quot;: &quot;tester&quot;,
-    &quot;id&quot;: &quot;349&quot;,
-    &quot;createdAt&quot;: &quot;2021-08-22T23:10:13.439Z&quot;
+    &quot;name&quot;: &quot;ana&quot;,
+    &quot;job&quot;: &quot;dev&quot;,
+    &quot;id&quot;: &quot;744&quot;,
+    &quot;createdAt&quot;: &quot;2021-08-29T05:09:22.631Z&quot;
+}
+Request method:	GET
+Request URI:	https://reqres.in/api/users?page=1
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Sun, 29 Aug 2021 05:09:23 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+etag: W/&quot;3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8&quot;
+via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: MISS
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=MGpYAg7carsDtrR8%2FGc1OMhL5RzD%2B%2FAE9gs6LEAa3r4JdDYq%2Fg7GEIIAMOD7MNYTgKjzU38UGNwBozedBeHwQFC7a4OSpYXojR7ei9IoOg6c26b6RpM4p9VTkX0%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 686344543f8156b9-LIM
+Content-Encoding: gzip
+alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400
+
+{
+    &quot;page&quot;: 1,
+    &quot;per_page&quot;: 6,
+    &quot;total&quot;: 12,
+    &quot;total_pages&quot;: 2,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;email&quot;: &quot;george.bluth@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;George&quot;,
+            &quot;last_name&quot;: &quot;Bluth&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/1-image.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;Janet&quot;,
+            &quot;last_name&quot;: &quot;Weaver&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;email&quot;: &quot;emma.wong@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;Emma&quot;,
+            &quot;last_name&quot;: &quot;Wong&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/3-image.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;email&quot;: &quot;eve.holt@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;Eve&quot;,
+            &quot;last_name&quot;: &quot;Holt&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/4-image.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;email&quot;: &quot;charles.morris@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;Charles&quot;,
+            &quot;last_name&quot;: &quot;Morris&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/5-image.jpg&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;email&quot;: &quot;tracey.ramos@reqres.in&quot;,
+            &quot;first_name&quot;: &quot;Tracey&quot;,
+            &quot;last_name&quot;: &quot;Ramos&quot;,
+            &quot;avatar&quot;: &quot;https://reqres.in/img/faces/6-image.jpg&quot;
+        }
+    ],
+    &quot;support&quot;: {
+        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+    }
+}
+Request method:	PUT
+Request URI:	https://reqres.in/api/users/1
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;name&quot;: &quot;ana&quot;,
+    &quot;job&quot;: &quot;dev&quot;
+}
+HTTP/1.1 200 OK
+Date: Sun, 29 Aug 2021 05:09:24 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+etag: W/&quot;41-JNtil1W7ia5YCc54mAZ/54LMYXs&quot;
+via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=maNYK3adpF2r55JCHd9T72AmcxMt3PBsWUlHO5PYjgTBK8EjJlI27Zc7TAVb1fZv4yn%2BHPfUU%2BUOUoOolWLRgT5TbGsSrn14JfFTCjzNEKWDhFkU1ZLK0hwiMS8%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 68634457cce056a6-LIM
+Content-Encoding: gzip
+alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400
+
+{
+    &quot;name&quot;: &quot;ana&quot;,
+    &quot;job&quot;: &quot;dev&quot;,
+    &quot;updatedAt&quot;: &quot;2021-08-29T05:09:24.082Z&quot;
 }
 </pre>
 </span>
@@ -137,7 +273,7 @@ alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at Aug 22, 2021 6:10:13 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at Aug 29, 2021 12:09:24 AM</p>
 </div>
 </div>
 </body>
