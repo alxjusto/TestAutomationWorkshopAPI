@@ -2,7 +2,7 @@ package com.workshop.api.mapper;
 
 import com.workshop.api.dto.User;
 
-public class UsuarioMapper {
+public class CreateUserMapper {
 
     User userBodyRequest = new User();
 

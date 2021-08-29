@@ -3,34 +3,34 @@ package com.workshop.api.tests;
 import com.workshop.api.dto.User;
 import com.workshop.api.helper.BaseTestHelper;
 import com.workshop.api.helper.CreateUserHelper;
-import com.workshop.api.mapper.UsuarioMapper;
+import com.workshop.api.mapper.CreateUserMapper;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class UsuariosTest extends BaseTestHelper {
+public class CreateUserTest extends BaseTestHelper {
 
     @Test
-    public void obtenerListadoDeUsuarioTest() {
+    public void getUserListTest() {
         given()
                 .get("users?page=1")
                 .then();
     }
 
     @Test
-    public void crearUsuarioTest() throws Exception {
+    public void createUserTest() throws Exception {
         CreateUserHelper createUserHelper = new CreateUserHelper();
         Response response = createUserHelper.createUser();
         Assertions.assertEquals(201, response.getStatusCode());
     }
 
     @Test
-    public void actualizarUsuarioTest() {
+    public void updateUserTest() {
 
-        UsuarioMapper usuarioMapper = new UsuarioMapper();
-        User user = usuarioMapper.setUsuarioRequest(new User("ana", "dev"));
+        CreateUserMapper createUserMapper = new CreateUserMapper();
+        User user = createUserMapper.setUsuarioRequest(new User("ana", "dev"));
 
         given()
                 .body(user)
