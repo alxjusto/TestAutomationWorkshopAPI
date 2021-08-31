@@ -1,7 +1,7 @@
 package com.workshop.api.dataproviders;
 
 import com.google.gson.Gson;
-import com.workshop.api.dto.User;
+import com.workshop.api.model.User;
 import com.workshop.api.util.Utilities;
 
 import java.io.BufferedReader;

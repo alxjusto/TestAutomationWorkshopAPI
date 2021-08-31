@@ -1,7 +1,7 @@
 package com.workshop.api.helper;
 
 import com.workshop.api.dataproviders.JsonDataProvider;
-import com.workshop.api.dto.User;
+import com.workshop.api.model.User;
 import com.workshop.api.mapper.CreateUserMapper;
 import com.workshop.api.util.Utilities;
 import io.restassured.response.Response;
@@ -17,7 +17,7 @@ public class CreateUserHelper {
         CreateUserMapper createUserMapper = new CreateUserMapper();
 
         String userJob = Utilities.getProperty("use.data.test");
-        User user = createUserMapper.setUsuarioRequest(jsonDataProvider.getUser(userJob));
+        User user = createUserMapper.setUserRequest(jsonDataProvider.getUser(userJob));
 
         return given()
                 .when()

@@ -1,6 +1,6 @@
 package com.workshop.api.tests;
 
-import com.workshop.api.dto.User;
+import com.workshop.api.model.User;
 import com.workshop.api.helper.BaseTestHelper;
 import com.workshop.api.helper.CreateUserHelper;
 import com.workshop.api.mapper.CreateUserMapper;
@@ -30,7 +30,7 @@ public class CreateUserTest extends BaseTestHelper {
     public void updateUserTest() {
 
         CreateUserMapper createUserMapper = new CreateUserMapper();
-        User user = createUserMapper.setUsuarioRequest(new User("ana", "dev"));
+        User user = createUserMapper.setUserRequest(new User("ana", "dev"));
 
         given()
                 .body(user)

@@ -1,14 +1,13 @@
 package com.workshop.api.mapper;
 
-import com.workshop.api.dto.User;
+import com.workshop.api.model.User;
 
 public class CreateUserMapper {
 
-    User userBodyRequest = new User();
-
-    public User setUsuarioRequest(User user) {
-        userBodyRequest.setName(user.getName());
-        userBodyRequest.setJob(user.getJob());
-        return userBodyRequest;
+    public User setUserRequest(User user) {
+        return User.builder()
+                .name(user.getName())
+                .job(user.getJob())
+                .build();
     }
 }
