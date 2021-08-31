@@ -15,7 +15,6 @@ We set a JsonDataProvider class as a test data example for DDT.
 * Project Lombock: https://projectlombok.org/setup/gradle
 
 ####Design Patterns
-* POM
 * DTO
 * Builder
 
