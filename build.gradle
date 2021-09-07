@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.8.1'
 }
 
 group 'org.example'
@@ -15,6 +16,13 @@ dependencies {
     implementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.4'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+    implementation group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.13.8'
+    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.13.10'
+    implementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.13.6'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
+    implementation group: 'org.apache.tika', name: 'tika-core', version: '1.24.1'
+    implementation group: 'org.jooq', name: 'joor-java-8', version: '0.9.13'
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
@@ -23,6 +31,24 @@ dependencies {
 
 }
 
+configurations {
+    testCompile
+}
+
 test {
     useJUnitPlatform()
 }
+
+allure {
+    configuration = "testImplementation"
+    //PUT_HERE_YOUR_PATH: you must replace for your own path
+    resultsDir = file('PUT_HERE_YOUR_PATH/build/allure-results')
+    reportDir = file('build/allure-results')
+    autoconfigure = false
+    aspectjweaver = true
+    version = '2.8.1'
+    useJUnit5 {
+        version = '2.13.6'
+    }
+}
+

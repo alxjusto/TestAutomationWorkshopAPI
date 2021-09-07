@@ -1,41 +1,36 @@
 package com.workshop.api.tests;
 
-import com.workshop.api.model.User;
-import com.workshop.api.helper.BaseTestHelper;
-import com.workshop.api.helper.CreateUserHelper;
-import com.workshop.api.mapper.CreateUserMapper;
+import com.workshop.api.helper.BaseTest;
+import com.workshop.api.helper.CreateUser;
+import com.workshop.api.helper.GetUserList;
+import com.workshop.api.helper.UpdateUser;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
+import java.io.FileNotFoundException;
 
-public class CreateUserTest extends BaseTestHelper {
+public class CreateUserTest extends BaseTest {
 
     @Test
     public void getUserListTest() {
-        given()
-                .get("users?page=1")
-                .then();
+        GetUserList userList = new GetUserList();
+        Response response = userList.getUserList();
+        Assertions.assertEquals(200, response.getStatusCode());
     }
 
     @Test
     public void createUserTest() throws Exception {
-        CreateUserHelper createUserHelper = new CreateUserHelper();
-        Response response = createUserHelper.createUser();
+        CreateUser createUser = new CreateUser();
+        Response response = createUser.createUser();
         Assertions.assertEquals(201, response.getStatusCode());
     }
 
     @Test
-    public void updateUserTest() {
-
-        CreateUserMapper createUserMapper = new CreateUserMapper();
-        User user = createUserMapper.setUserRequest(new User("ana", "dev"));
-
-        given()
-                .body(user)
-                .put("users/1")
-                .then();
+    public void updateUserTest() throws FileNotFoundException {
+        UpdateUser user = new UpdateUser();
+        Response response = user.updateUser();
+        Assertions.assertEquals(200, response.getStatusCode());
     }
 
 }

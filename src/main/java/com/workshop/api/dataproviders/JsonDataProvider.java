@@ -21,11 +21,8 @@ public class JsonDataProvider {
 
     private List<User> getUsersList() throws FileNotFoundException {
         Gson gson = new Gson();
-        BufferedReader bufferedReader = null;
-
-        bufferedReader = new BufferedReader(new FileReader(capabilityFilePath));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(capabilityFilePath));
         User[] users = gson.fromJson(bufferedReader, User[].class);
-
         return Arrays.asList(users);
     }
 
