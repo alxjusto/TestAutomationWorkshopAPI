@@ -1,5 +1,6 @@
 package com.workshop.api.helper;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.Filter;
@@ -12,7 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseTestHelper {
+public abstract class BaseTest {
 
     @BeforeAll
     public static void setUp() {
@@ -23,6 +24,7 @@ public abstract class BaseTestHelper {
         List<Filter> filters = new ArrayList<>();
         filters.add(new RequestLoggingFilter());
         filters.add(new ResponseLoggingFilter());
+        filters.add(new AllureRestAssured());
 
         return new RequestSpecBuilder()
                 .setBaseUri("https://reqres.in")

@@ -1,8 +1,8 @@
 package com.workshop.api.helper;
 
 import com.workshop.api.dataproviders.JsonDataProvider;
-import com.workshop.api.model.User;
 import com.workshop.api.mapper.CreateUserMapper;
+import com.workshop.api.model.User;
 import com.workshop.api.util.Utilities;
 import io.restassured.response.Response;
 
@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 
 import static io.restassured.RestAssured.given;
 
-public class CreateUserHelper {
+public class CreateUser {
 
     public Response createUser() throws FileNotFoundException {
         JsonDataProvider jsonDataProvider = new JsonDataProvider();
@@ -26,6 +26,4 @@ public class CreateUserHelper {
                 .then()
                 .extract().response();
     }
-
-
 }
